@@ -41,9 +41,6 @@ function numToString(value){
   else return tens[value - (value%10)] +  " " + ones[value%10]
 }
 
-function priceToString(value) {
-  let dollars = parseInt(value)
-  let cents = parseInt((value % 1).toFixed(2) * 100)
   
 function priceToString(value) {
   let dollars = parseInt(value)
