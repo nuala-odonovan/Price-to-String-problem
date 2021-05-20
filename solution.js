@@ -51,4 +51,4 @@ function priceToString(value) {
   else return `${numToString(dollars)} ${dollars > 1 ? 'dollars' : 'dollar'} and ${numToString(cents)} ${cents > 1 ? 'cents' : 'cent'}`
 }
 
-}
+
