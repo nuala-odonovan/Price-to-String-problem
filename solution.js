@@ -36,8 +36,8 @@ const teens = {
 //helper function to convert integers to string value
 function numToString(value){
   if(value < 10) return ones[value]
-  if(value > 10 && value < 20 ) value = teens[value]
-  if(value % 10 === 0 ) value = tens[value]
+  if(value > 10 && value < 20 ) return teens[value]
+  if(value % 10 === 0 ) return tens[value]
   else return tens[value - (value%10)] +  " " + ones[value%10]
 }
 
