@@ -45,7 +45,13 @@ function priceToString(value) {
   let dollars = parseInt(value)
   let cents = parseInt((value % 1).toFixed(2) * 100)
   
-  if(dollars===0) return `${numToString(cents)} cents`
-  else if(cents===0) return `${numToString(dollars)} dollars`
-  else return `${numToString(dollars)} dollars and ${numToString(cents)} cents`
+function priceToString(value) {
+  let dollars = parseInt(value)
+  let cents = parseInt((value % 1).toFixed(2) * 100)
+  
+  if(dollars===0) return `${numToString(cents)} ${cents > 1 ? 'cents' : 'cent'}`
+  else if(cents===0) return `${numToString(dollars)} ${dollars > 1 ? 'dollars' : 'dollar'}`
+  else return `${numToString(dollars)} ${dollars > 1 ? 'dollars' : 'dollar'} and ${numToString(cents)} ${cents > 1 ? 'cents' : 'cent'}`
+}
+
 }
